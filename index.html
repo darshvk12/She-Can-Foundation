@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>She Can Foundation - Intern Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <span>She Can Foundation</span>
+            </div>
+            
+            <div id="logoutSection" style="display: none;">
+                <button class="btn-outline" onclick="logout()">Sign Out</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="auth-container" id="authContainer">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h1>Welcome to She Can Foundation</h1>
+                <p>Track your fundraising progress and compete with fellow interns</p>
+            </div>
+
+            <div class="demo-notice">
+                <strong>Demo Login:</strong> Use any of the intern emails (interna@example.com, internb@example.com, internc@example.com) with any password
+            </div>
+
+            <div class="auth-tabs">
+                <button class="auth-tab active" onclick="switchToLogin()">Sign In</button>
+                <button class="auth-tab" onclick="switchToSignup()">Create Account</button>
+            </div>
+
+            <div class="form-section active" id="loginSection">
+                <div class="form-group">
+                    <label class="form-label">Email address</label>
+                    <input type="email" id="loginEmail" class="form-input" placeholder="interna@example.com">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" id="loginPassword" class="form-input" placeholder="Enter any password">
+                </div>
+                <button class="btn-primary" onclick="handleLogin()">Sign In to Dashboard</button>
+            </div>
+
+            <div class="form-section" id="signupSection">
+                <div class="form-group">
+                    <label class="form-label">Full name</label>
+                    <input type="text" id="signupName" class="form-input" placeholder="Alex Johnson">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Email address</label>
+                    <input type="email" id="signupEmail" class="form-input" placeholder="alex@company.com">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" id="signupPassword" class="form-input" placeholder="Create a password">
+                </div>
+                <button class="btn-primary" onclick="handleSignup()">Create Account</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard" id="dashboard">
+        <div class="dashboard-header">
+            <div class="welcome-section">
+                <h1>Good morning, <span id="userName">Intern</span> 👋</h1>
+                <p>Here's your fundraising overview for this quarter</p>
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-header">
+                    <span class="stat-title">Total Raised</span>
+                </div>
+                <div class="stat-value" id="totalRaised">$0</div>
+                <div class="stat-change">+12% from last month</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-header">
+                    <span class="stat-title">Referral Code</span>
+                </div>
+                <div class="stat-value" id="referralCode">CODE2025</div>
+                <div class="stat-change">Copy to share</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-header">
+                    <span class="stat-title">Rank</span>
+                </div>
+                <div class="stat-value" id="rank">#1</div>
+                <div class="stat-change">Your current position</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-header">
+                    <span class="stat-title">Donors</span>
+                </div>
+                <div class="stat-value" id="donorsCount">0</div>
+                <div class="stat-change">+5 this week</div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Achievement Progress</h3>
+                    <p class="card-subtitle">Complete milestones to unlock rewards</p>
+                </div>
+                <div class="card-content" id="achievementsList">
+                    <!-- Achievements will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Monthly Rankings</h3>
+                    <p class="card-subtitle">Top performers this period</p>
+                </div>
+                <div class="card-content" id="leaderboardList">
+                    <!-- Leaderboard will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
