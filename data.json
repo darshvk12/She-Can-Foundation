@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Intern A",
+    "email": "interna@example.com",
+    "referral_code": "internA2025",
+    "total_donations": 1200
+  },
+  {
+    "name": "Intern B",
+    "email": "internb@example.com",
+    "referral_code": "internB2025",
+    "total_donations": 3500
+  },
+  {
+    "name": "Intern C",
+    "email": "internc@example.com",
+    "referral_code": "internC2025",
+    "total_donations": 2700
+  }
+]
